@@ -1,0 +1,6 @@
+name = "raffle"
+type = "webpack"
+account_id = "1cf8400048df0047e259469f552bbff1"
+workers_dev = true
+# route = "raffle.redc.org.au"
+zone_id = "42620caef743c56c3aeee086cbf0035f"
