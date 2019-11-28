@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Raffle</title>
+    <title>Raffle Draw</title>
 </head>
 <body>
-<h1>Hello World</h1>
-<p>This is all generated using a Worker</p>
+<h1>Raffle Draw</h1>
+<!-- <p>This is all generated using a Worker</p> -->
 <div id="stepOne">
     <h2>Step One</h2>
     <p>Add your raffle booklets</p>
     <form action="" name="add">
-        <label for="max">Number of raffle tickets per book</label>
+        <label for="max">Number of raffle tickets in book</label>
         <input type="number" name="max" value="100" min="1" required>
-        <label for="colour">Colour of raffle booklet</label>
+        <label for="colour">Colour of raffle book</label>
         <input type="text" name="colour" placeholder="red">
-        <label for="letter">Letter of raffle booklet</label>
+        <label for="letter">Letter of raffle book</label>
         <input type="text" name="letter" placeholder="A" maxlength="1">
         <input type="submit" value="Add raffle booklet">
     </form>
@@ -26,6 +26,7 @@
 
 <div id="stepTwo" hidden>
     <h2>Step Two</h2>
+    <p>Draw Winners</p>
     <form  action="" name="draw">
         <input type="submit" name="drawWinner" value="Draw a Winner">
     </form>
@@ -63,7 +64,7 @@
         // check for duplicates
         for (var i = 0; i < raffleBooks.length; i++) {
             if (raffleBooks[i].max === max && raffleBooks[i].colour === colour && raffleBooks[i].letter === letter) {
-                console.warn('duplicate not added!')
+                console.warn('duplicate not added!', raffleBook)
                 alert('Duplicate raffle booklet not added!')
                 return
             }
@@ -102,7 +103,7 @@
         event.preventDefault()
         // stop an infinite loop when the user attempts to award more winners than raffle tickets available
         if (raffleWinners.length >= maxWinners) {
-            console.warn('Maximum possible winners awarded')
+            console.warn('Maximum possible winners awarded', maxWinners)
             return
         }
 
@@ -121,7 +122,7 @@
             // check for duplicate
             for (var i = 0; i < raffleWinners.length; i++) {
                 if (raffleWinners[i].num === winner.num && raffleWinners[i].colour === winner.colour && raffleWinners[i].letter === winner.letter) {
-                    console.warn('Already won, re-draw!')
+                    console.warn('Already won, re-draw!', i, winner)
                     dublicateFound = true
                     break
                 }
