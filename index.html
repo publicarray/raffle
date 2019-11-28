@@ -74,7 +74,8 @@
             }
         }
         raffleBooks.push(raffleBook)
-        raffleBooksList.appendChild(raffleBookToHtml(raffleBook))
+        // raffleBooksList.appendChild(raffleBookToHtml(raffleBook))
+        raffleBooksList.insertBefore(raffleBookToHtml(raffleBook), raffleBooksList.childNodes[0])
         event.target.reset()
 
         // GET parameters
@@ -135,7 +136,8 @@
             dublicateFound = false
         }
         raffleWinners.push(winner)
-        raffleWinnersList.appendChild(raffleWinnerToHtml(winner))
+        // raffleWinnersList.appendChild(raffleWinnerToHtml(winner))
+        raffleWinnersList.insertBefore(raffleWinnerToHtml(winner), raffleWinnersList.childNodes[0])
         event.target.reset()
     }
     function raffleWinnerToHtml (item) {
