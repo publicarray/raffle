@@ -9,7 +9,7 @@ wrangler build
 wrangler publish
 ```
 
-# Get a random number:
+# [Get a random number](https://raffle.publicarray.workers.dev/ran?max=100):
 
 ```sh
 $ curl 'https://raffle.publicarray.workers.dev/ran?max=100'
