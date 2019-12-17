@@ -1,17 +1,10 @@
-# 👷 `worker-template` Hello World
+# [Raffle 🎲](https://raffle.publicarray.workers.dev/)
 
-A template for kick starting a Cloudflare worker project.
-
-[`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
+A simple random raffle book win drawer. [Demo](https://raffle.publicarray.workers.dev/)
 
 #### Wrangler
 
-To generate using [wrangler](https://github.com/cloudflare/wrangler)
-
 ```
-wrangler generate projectname https://github.com/cloudflare/worker-template
+wrangler build
+wrangler publish
 ```
-
-#### Serverless
-
-To deploy using serverless add a [`serverless.yml`](https://serverless.com/framework/docs/providers/cloudflare/) file.
