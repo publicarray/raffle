@@ -8,3 +8,10 @@ A simple random raffle book win drawer. [Demo](https://raffle.publicarray.worker
 wrangler build
 wrangler publish
 ```
+
+# Get a random number:
+
+```sh
+$ curl 'https://raffle.publicarray.workers.dev/ran?max=100'
+42
+```
